@@ -17,34 +17,35 @@ Delete recipe by its ID.<br>
 Python: The programming language used for backend development.<br>
 Git: Version control system for tracking changes in source code.<br>
 
-## Setup and Installation
+## Setup and Installation 
 <p>To run the recipe API locally on your machine, follow these steps:</p>
-1. Ensure you have Python and pip installed. If not, refer to the prerequisites in the documentation.
-2. Clone this repository to your local machine:
+1. Ensure you have Python and pip installed. If not, refer to the prerequisites in the documentation.<br>
+2. Clone this repository to your local machine:<br>
 
-  git clone `https://github.com/alexander784/Recipe_API.git`
-3. Create and activate a virtual environment:
-  `python -m venv env`
-`# On Windows:`
-`. env/Scripts/activate`
-`# On macOS/Linux:`
-`source env/bin/activate`
-4. Install the required dependencies:
-   `pip install -r requirements.txt`
+ git clone `https://github.com/alexander784/Recipe_API.git`<br>
+3. <p>Create and activate a virtual environment:</p>
+  `python -m venv env`<br>
+`# On Windows:`<br>
+`. env/Scripts/activate`<br>
+`# On macOS/Linux:`<br>
+`source env/bin/activate`<br>
 
-5. Confirm SQlite database configurations:
-`DATABASES = {`
-    `'default': {`
-        `'ENGINE': 'django.db.backends.``sqlite3',`
-        `'NAME': BASE_DIR / 'db.``sqlite3',`
-    `}`
-`}`
+4. Install the required dependencies:<br>
+   `pip install -r requirements.txt`<br>
 
-1. Apply database migrations:
-`python3 manage.py makemigrations`
+5. Confirm SQlite database configurations:<br>
+`DATABASES = {`<br>
+    `'default': {`<br>
+        `'ENGINE': 'django.db.backends.``sqlite3',`<br>
+        `'NAME': BASE_DIR / 'db.``sqlite3',`<br>
+    `}`<br>
+`}`<br>
+
+1. Apply database migrations:<br>
+`python3 manage.py makemigrations`<br>
 `python3 manage.py migrate`
 
-2. Run the development server:
+2. Run the development server:<br>
 `python3 manage.py runserver`
 
 <p>The API should be accessible at: http://127.0.0.1:8000/recipe_app/</p>
@@ -63,11 +64,11 @@ Git: Version control system for tracking changes in source code.<br>
 
 <p>Response format (GET and POST):</p> <br>
 
-`{`
-    `"id": 1,`
-    `"name": "recipe title",`
-    `"description": "Description of the recipe."`
-`}`
+`{`<br>
+    `"id": 1,`<br>
+    `"name": "recipe title",`<br>
+    `"description": "Description of the recipe."`<br>
+`}`<br>
 
 ## API Usage:
 1. Get list of all recipes: <br>
@@ -75,23 +76,24 @@ Git: Version control system for tracking changes in source code.<br>
 
 2. Create new recipe <br>
 
-`POST http://127.0.0.1:8000/recipe_app/`
-`{`
-    `"title": "Pilau",`
-    `"description": "Boil water for about ten minutes."`
+`POST http://127.0.0.1:8000/recipe_app/`<br>
+`{`<br>
+    `"title": "Pilau",`<br>
+    `"description": "Boil water for about ten minutes."`<br>
 `}`
 
-3. Get details of a specific recipe by ID:
+3. Get details of a specific recipe by ID:<br>
 `GET http://127.0.0.1:8000/recipe_app/1/` 
 
-4. Update an existing recipe by ID:
-`PUT http://127.0.0.1:8000/recipe_app/1/`
-`{`
-    `"name": "Pilau masala",`
-    `"description": "Pilau spices"`
-`}`
+4. Update an existing recipe by ID:<br>
 
-5. Delete a recipe by ID:
+`PUT http://127.0.0.1:8000/recipe_app/1/`<br>
+`{`<br>
+    `"name": "Pilau masala",`<br>
+    `"description": "Pilau spices"`<br>
+`}`<br>
+
+5. Delete a recipe by ID:<br>
 `DELETE http://127.0.0.1:8000/recipe_app/1/`
 
 ## <p> Author: Alexander Nyaga.</p>
